@@ -57,3 +57,44 @@ const resetInputs = () => {
   date.value = "";
 };
 document.querySelector("form").addEventListener("submit", handleSubmit);
+
+//MUDA O INPUT DIFERENCIADO
+const handleFocus = ({ target }) => {
+  //o target pega o elemento que disparou determinado evento
+  const span = target.previousElementSibling; //o target é o input que disparou o evento, o previousElementSibling se refere ao irmão anterior desse input, ou seja, o span
+
+  if (target.className == "text-area") {
+    console.log("É text-area");
+    span.classList.add("span-active-textarea");
+  } else {
+    console.log("É input");
+    span.classList.add("span-active");
+  }
+};
+
+const handleFocusOut = ({ target }) => {
+  //o target pega o elemento que disparou determinado evento
+  const span = target.previousElementSibling; //o target é o input que disparou o evento, o previousElementSibling se refere ao irmão anterior desse input, ou seja, o span
+  //se for text area remove a classe de text area
+  if (target.value == "" && target.className == "text-area") {
+    span.classList.remove("span-active-textarea");
+    //se for input remove a classe dos inputs
+  } else if (target.value == "" && target.className == "input") {
+    span.classList.remove("span-active");
+  }
+};
+
+const inputs = document.querySelectorAll(".input");
+const textarea = document.querySelector(".text-area");
+
+inputs.forEach((input) => {
+  //percorre o array com todos os inputs e, para cada input, faz o addEventListener
+  input.addEventListener("focus", handleFocus);
+  textarea.addEventListener("focus", handleFocus);
+});
+
+inputs.forEach((input) => {
+  //percorre o array com todos os inputs e, para cada input, faz o addEventListener
+  input.addEventListener("focusout", handleFocusOut);
+  textarea.addEventListener("focusout", handleFocusOut);
+});

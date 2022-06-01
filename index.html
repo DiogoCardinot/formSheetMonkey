@@ -14,33 +14,57 @@
         <form class="formWrapper">
 
         <div class="inputWrapper">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" required/>
+            <label for="nome" class="label">
+                 <span >Nome</span>
+                <input type="text" name="nome" id="nome" class="input" required/>
+            </label>
         </div>
 
         <div class="inputWrapper">
-            <label for="email">E-mail para contato</label>
-            <input type="email" name="email" id="email" required/>     
+            <label for="email" class="label">
+                 <span>
+                    E-mail para contato
+                </span>
+                <input type="email" name="email" id="email" class="input" required/>     
+            
+            </label>
         </div>
 
         <div class="inputWrapper">
-            <label for="telefone">Telefone</label>
-            <input type="number" name="telefone" id="telefone" required/>
+            <label for="telefone" class="label">
+            <span>
+                Telefone
+            </span>    
+            <input type="number" name="telefone" id="telefone" class="input" required/>
+            </label>
         </div>
 
         <div class="inputWrapper">
-            <label for="subject">Assunto da Mensagem</label>
-            <input type="text" name="assuntoDaMensagem" id="subject" required/>
+            <label for="subject" class="label"> 
+                <span >
+                    Assunto da Mensagem
+                </span>
+                <input type="text" name="assuntoDaMensagem" id="subject" class="input" required/>
+            </label>
         </div>
 
         <div class="inputWrapper">
-            <label for="mensagem">Mensagem</label>
-            <textarea name="mensagem" id="mensagem" required></textarea>
+            <label for="mensagem" class="label">
+                <span>
+                    Mensagem
+                </span>
+                <textarea name="mensagem" id="mensagem" class="text-area" required></textarea>
+            </label>
         </div>
 
         <div class="inputWrapper">
-            <label for="data">Data do contato</label>
-            <input type="date" name="data" id="data" required/>
+            <label for="data" class="label">
+                <span class="span-active">
+                    Data do contato
+
+                </span>
+                <input type="date" name="data" id="data" required/>
+            </label>
         </div>
         
         <button type="submit" class="submit-button">Enviar

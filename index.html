@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="stylesheet" href="./styles.css">
+    <title>Contact Form</title>
+</head>
+<body>
+    <div class="bodyWrapper">
+        <form class="formWrapper">
+
+        <div class="inputWrapper">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" required/>
+        </div>
+
+        <div class="inputWrapper">
+            <label for="email">E-mail para contato</label>
+            <input type="email" name="email" id="email" required/>     
+        </div>
+
+        <div class="inputWrapper">
+            <label for="telefone">Telefone</label>
+            <input type="number" name="telefone" id="telefone" required/>
+        </div>
+
+        <div class="inputWrapper">
+            <label for="subject">Assunto da Mensagem</label>
+            <input type="text" name="assuntoDaMensagem" id="subject" required/>
+        </div>
+
+        <div class="inputWrapper">
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem" id="mensagem" required></textarea>
+        </div>
+
+        <div class="inputWrapper">
+            <label for="data">Data do contato</label>
+            <input type="date" name="data" id="data" required/>
+        </div>
+        
+        <button type="submit" class="submit-button">Enviar
+            
+        </button>
+        <div class="succesSubmit">
+            <span class="succesSubmitText"></span>
+        </div>
+    </form>
+    </div>
+    
+     <script src="./scripts.js"> </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bodyWrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  background: rgb(245, 245, 245);
+  border-radius: 15px;
+  padding: 30px 16px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+label {
+  position: relative;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+}
+input {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  padding: 0 6px;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+}
+textarea {
+  width: 100%;
+  min-height: 30px;
+  max-height: 45px;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 6px;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border: 0;
+  background: rgb(128, 128, 202);
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5px;
+}
+.loadingImage {
+  width: 15px;
+  animation: spin 1s infinite linear;
+}
+.succesSubmit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 264px;
+  margin-top: 5px;
+  position: absolute;
+  bottom: 10px;
+}
+.succesSubmitText {
+  color: rgb(101, 194, 101);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

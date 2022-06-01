@@ -63,10 +63,13 @@ const handleFocus = ({ target }) => {
   //o target pega o elemento que disparou determinado evento
   const span = target.previousElementSibling; //o target é o input que disparou o evento, o previousElementSibling se refere ao irmão anterior desse input, ou seja, o span
 
+  //se o que disparou o evento for um text-area adiciona a classe a ele
   if (target.className == "text-area") {
     console.log("É text-area");
     span.classList.add("span-active-textarea");
-  } else {
+  }
+  //se o que disparou o evento for um input, adiciona a classe àquele input que disparou
+  else if (target.className == "input") {
     console.log("É input");
     span.classList.add("span-active");
   }
@@ -78,7 +81,7 @@ const handleFocusOut = ({ target }) => {
   //se for text area remove a classe de text area
   if (target.value == "" && target.className == "text-area") {
     span.classList.remove("span-active-textarea");
-    //se for input remove a classe dos inputs
+    //se for input remove a classe do input clicado
   } else if (target.value == "" && target.className == "input") {
     span.classList.remove("span-active");
   }

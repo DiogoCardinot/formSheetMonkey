@@ -1,16 +1,21 @@
 const button = document.querySelector(".submit-button");
 const successSend = document.querySelector(".succesSubmitText");
-
+//os spans foram pegos pelo id e n pelo seletor geral pois não queria remover a classe active da data, só dos outros elementos
+const spans = document.querySelectorAll("#span");
 //função que adiciona ao botão a imagem de load
 const addLoad = () => {
   button.innerHTML = '<img src="./loading.png" class="loadingImage">';
 };
-
 //função que retira do botão a imagem de load e volta o texto de enviar
 const removeLoad = () => {
   button.innerHTML = "Enviar";
   successSend.innerHTML = "Dados enviados com sucesso!";
   resetInputs();
+  //remove a classe dos spans com id="span" após o término do envio do formulário
+  spans.forEach((spans) => {
+    spans.classList.remove("span-active");
+    spans.classList.remove("span-active-textarea");
+  });
 };
 
 const handleSubmit = (event) => {
